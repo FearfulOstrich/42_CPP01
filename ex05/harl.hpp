@@ -6,19 +6,15 @@
 /*   By: aalleon <aalleon@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/29 14:48:49 by aalleon           #+#    #+#             */
-/*   Updated: 2022/07/29 15:06:51 by aalleon          ###   ########.fr       */
+/*   Updated: 2022/07/29 18:58:38 by antoine          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef _HARL_HPP_
 # define _HARL_HPP_
 
-enum	ComplainLevel
-{
-	0: &Harl::_debug;
-	1: &Harl::_info;
-	2: 
-}
+# include <string>
+# include <iostream>
 
 class Harl
 {

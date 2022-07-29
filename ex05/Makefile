@@ -26,7 +26,7 @@ INCLDIR	=	includes/
 
 ## Objects
 
-OBJDIR	=	objs/
+OBJDIR	=
 
 OBJ		=	$(subst $(SRCDIR), $(OBJDIR), $(SRC:.cpp=.o))
 
@@ -42,7 +42,6 @@ $(NAME)		:	$(OBJ)
 				$(CC) $(OBJ) -o $(NAME)
 
 $(OBJDIR)%.o:	$(SRCDIR)%.cpp
-				mkdir -p $(OBJDIR)
 				$(CC) $(FLAGS) -c $< -o $@ -I $(INCLDIR)
 
 clean		:
