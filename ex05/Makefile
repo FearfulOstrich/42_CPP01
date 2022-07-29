@@ -6,7 +6,7 @@
 
 ## Compilation
 
-NAME	=	sed
+NAME	=	harl
 
 CC		=	c++
 
@@ -14,10 +14,9 @@ FLAGS	=	-Wall -Wextra -Werror -std=c++98
 
 ## Sources
 
-SRCDIR	=	srcs/
+SRCDIR	=
 
-SRCFILE	=	main.cpp sed.cpp read_file.cpp replace.cpp check_substrings.cpp\
-			file_write.cpp
+SRCFILE	=	main.cpp harl.cpp
 
 SRC		=	$(addprefix $(SRCDIR), $(SRCFILE))
 

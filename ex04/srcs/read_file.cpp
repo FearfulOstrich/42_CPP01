@@ -6,20 +6,22 @@
 /*   By: antoine <antoine@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/27 17:50:28 by antoine           #+#    #+#             */
-/*   Updated: 2022/07/27 23:07:13 by antoine          ###   ########.fr       */
+/*   Updated: 2022/07/29 14:26:23 by aalleon          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "sed.hpp"
 
-std::string	read_file(char *fname)
+t_bool	read_file(char *fname, std::string *content)
 {
 	std::ifstream		infile;
-	std::stringstream	content;
+	std::stringstream	content_stream;
 
 	infile.open(fname);
 	if (!infile.is_open())
-		return (0);
-	content << infile.rdbuf();
-	return (content.str());
+		return (1);
+	content_stream << infile.rdbuf();
+	infile.close();
+	*content = content_stream.str();
+	return (0);
 }
