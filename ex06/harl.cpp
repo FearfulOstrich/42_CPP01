@@ -6,7 +6,7 @@
 /*   By: aalleon <aalleon@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/29 14:48:55 by aalleon           #+#    #+#             */
-/*   Updated: 2022/07/30 11:07:35 by antoine          ###   ########.fr       */
+/*   Updated: 2022/07/30 11:07:41 by antoine          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,19 +26,23 @@ Harl::~Harl(void)
 
 void	Harl::complain(std::string level)
 {
-	void		(Harl::*fct_ptr[4])(void) =\
-		{&Harl::_debug, &Harl::_info, &Harl::_warning, &Harl::_error};
+	int	i;
 	std::string	complains[4] = {"debug", "info", "warning", "error"};
-	int			i;
 
 	i = -1;
 	while (++i < 4)
+		if (level.compare(complains[i]) == 0)
+			break ;
+	switch (i)
 	{
-		if (complains[i] == level)
-		{
-			(this->*fct_ptr[i])();
-			return ;
-		}
+		case DEBUG:
+			this->_debug();
+		case INFO:
+			this->_info();
+		case WARNING:
+			this->_warning();
+		case ERROR:
+			this->_error();
 	}
 	return ;
 }
