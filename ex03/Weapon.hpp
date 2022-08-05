@@ -6,15 +6,15 @@
 /*   By: antoine <antoine@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/21 19:53:02 by antoine           #+#    #+#             */
-/*   Updated: 2022/07/21 20:20:31 by antoine          ###   ########.fr       */
+/*   Updated: 2022/08/04 16:53:47 by aalleon          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <iostream>
 #include <string>
 
-#ifndef _WEAPON_H_
-# define _WEAPON_H_
+#ifndef _WEAPON_HPP_
+# define _WEAPON_HPP_
 
 class Weapon
 {

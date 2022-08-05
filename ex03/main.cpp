@@ -6,7 +6,7 @@
 /*   By: antoine <antoine@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/21 20:21:47 by antoine           #+#    #+#             */
-/*   Updated: 2022/07/21 20:36:27 by antoine          ###   ########.fr       */
+/*   Updated: 2022/08/05 13:06:32 by aalleon          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,8 @@ int main()
 {
 	{
 		Weapon	club = Weapon("simple club");
-		HumanA	bob = HumanA("bob", club);
+		Weapon	&club_ref = club;
+		HumanA	bob = HumanA("bob", club_ref);
 
 		bob.attack();
 		club.setType("big club");
@@ -28,6 +29,7 @@ int main()
 	}
 	{
 		Weapon	sword = Weapon("wooden sword");
+		Weapon	bow = Weapon("wooden bow");
 		HumanB	michel = HumanB("michel");
 
 		michel.attack();
@@ -36,6 +38,8 @@ int main()
 		sword.setType("iron sword");
 		michel.attack();
 		sword.setType("steel sword");
+		michel.attack();
+		michel.setWeapon(bow);
 		michel.attack();
 	}
 	return (0);

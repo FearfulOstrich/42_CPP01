@@ -6,12 +6,12 @@
 /*   By: antoine <antoine@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/21 20:03:11 by antoine           #+#    #+#             */
-/*   Updated: 2022/07/21 20:31:43 by antoine          ###   ########.fr       */
+/*   Updated: 2022/08/05 13:05:33 by aalleon          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef _HUMANB_H_
-# define _HUMANB_H_
+#ifndef _HUMANB_HPP_
+# define _HUMANB_HPP_
 
 #include "Weapon.hpp"
 
